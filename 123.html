@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table 1</h1>
+    <table id="table1">
+        <thead>
+            <tr>
+                <th>Index #</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h1>Table 2</h1>
+    <table id="table2">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alpha</td>
+                <td id="alpha"></td>
+            </tr>
+            <tr>
+                <td>Beta</td>
+                <td id="beta"></td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td id="charlie"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const table1Data = {
+            A1 : 41,
+            A2 : 18,
+            A3 : 21,
+            A4 : 63,
+            A5 : 2,
+            A6 : 53,
+            A7 : 5,
+            A8 : 57,
+            A9 : 60,
+            A10 : 93,
+            A11 : 28,
+            A12 : 3,
+            A13 : 90,
+            A14 : 39,
+            A15 : 80,
+            A16 : 88,
+            A17 : 49,
+            A18 : 60,
+            A19 : 26,
+            A20 : 28
+        };
+
+        const table1Body = document.getElementById('table1').getElementsByTagName('tbody')[0];
+        Object.entries(table1Data).forEach(([index, value]) => {
+            const newRow = table1Body.insertRow();
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            cell1.innerText = index;
+            cell2.innerText = value;
+        });
+
+        // Calculate values for Table 2
+        const alpha = table1Data['A5'] + table1Data['A20'];
+        const beta = table1Data['A15'] / table1Data['A7'];
+        const charlie = table1Data['A13'] * table1Data['A12'];
+
+        // Display Table 2
+        document.getElementById('alpha').innerText = alpha;
+        document.getElementById('beta').innerText = beta;
+        document.getElementById('charlie').innerText = charlie;
+    </script>
+</body>
+</html>
