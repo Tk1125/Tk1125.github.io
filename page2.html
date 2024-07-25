@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Page2</title>
+    </head>
+
+    <body>
+        <div class = "main">
+            <div class = "img">
+                <img src = "mulah_logo.png" alt="Mulah Logo"></img>
+            </div>
+            <div class = "word">
+                <h1>Registration</h1>
+                <p>Please fill up your details.</p>
+            </div>
+            <div class = "input">
+                <p>Name</p>
+                <input type="text" placeholder="Enter name">
+                <br>
+                <p>Birthday</p>
+                <input type="date">
+                <br>
+                <p>Email</p>
+                <input type="text" placeholder="Email Address">
+                <input type="checkbox">No email address
+            </div>
+            <div>
+                <a href="page3.html"><button>Continue</button></a>
+            </div>
+            <div class = "bottom">
+                <p>Powered by <a href="">MulahReward.com</a></p>
+            </div>
+        </div>
+    </body>
+    <style>
+        .main{
+            width: 640px;
+            height: 1136px;
+            border: 2px black solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        h1{
+            color: rgb(112, 112, 112);
+            font-size: 50px;
+            letter-spacing: 10px;
+        }
+        p{
+            color:black;
+        }
+        img{
+            width: 200px;
+        }
+        input{
+            display: block;
+        }
+        button{
+            padding: 15px 70px 15px 70px;
+            border-radius: 1000px;
+            background-color:rgb(231, 136, 52) ;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover{
+            background-color: transparent;
+            color: black;
+            border: solid, rgb(231, 136, 52);
+        }
+    </style>
+    <script>
+
+    </script>
+</html>
