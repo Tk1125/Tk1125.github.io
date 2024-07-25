@@ -45,5 +45,5 @@ for title, link, pub_date in news:
 
 htmlContent += "    </ul>\n</body>\n</html>"
 
-with open('articles.html', 'w') as file:
+with open('news.html', 'w') as file:
     file.write(htmlContent)
