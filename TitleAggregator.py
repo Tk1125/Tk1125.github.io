@@ -29,7 +29,7 @@ for linkTag in newsLinks:
     if dateTag and 'datetime' in dateTag.attrs:
         pubDate_str = dateTag['datetime']
         pubDate = datetime.fromisoformat(pubDate_str.replace('Z', '+00:00')).date()
-        if pubDate > datetime(2022, 1, 1).date():
+        if pubDate >= datetime(2022, 1, 1).date():
             pubDate = pubDate.strftime("%Y-%m-%d")
             news.append((title, fullLink, pubDate))
 
